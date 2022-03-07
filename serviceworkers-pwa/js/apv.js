@@ -16,9 +16,7 @@ formulario.addEventListener('submit', nuevaCita);
 // Heading
 const heading = document.querySelector('#administra');
 
-
 let editando = false;
-
 
 // Eventos
 eventListeners();
@@ -40,14 +38,13 @@ const citaObj = {
     sintomas: ''
 }
 
-
 function datosCita(e) {
     //  console.log(e.target.name) // Obtener el Input
     citaObj[e.target.name] = e.target.value;
 }
 
 // CLasses
-class Citas {
+class Citas {
     constructor() {
         this.citas = []
     }
@@ -170,7 +167,6 @@ class UI {
 }
 
 const administrarCitas = new Citas();
-console.log(administrarCitas);
 const ui = new UI(administrarCitas);
 
 function nuevaCita(e) {
